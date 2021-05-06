@@ -6,8 +6,8 @@
           <form @submit="onSubmit"  >
               <el-input v-model="title" ref="title" clearable type="text" placeholder="Add todos..."></el-input>
 
+             <el-button type="success" icon="el-icon-plus" native-type="submit"  circle></el-button>
             
-             <el-button type="primary" native-type="submit"  round>Submit</el-button>
           </form>
       </div>
   </div>
@@ -31,7 +31,7 @@ methods:{
         e.preventDefault();
         
        await  this.addTodo(this.title)
-          this.$notify({
+          this.$message({
         title: '成功',
         message: `提交成功内容为 ${this.title}`,
         type: 'success'

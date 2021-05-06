@@ -1,7 +1,7 @@
 <template>
   <div> 
       Filter todos : 
-      <el-select v-model="value" placeholder="请选择">
+      <el-select @change="filterTodos($event)" v-model="value"  placeholder="请选择">
     <el-option
       v-for="item in options"
       :key="item.value"
@@ -13,12 +13,20 @@
 </template>
 
 <script>
+
+import {mapActions} from 'vuex'
+
+
+
 export default {
 
-name : "FilterTodo"
 
 
-,
+name : "FilterTodo",
+
+methods: {
+...mapActions(['filterTodos'])
+},
 data() {
       return {
         options: [
@@ -41,7 +49,6 @@ data() {
         value: ''
       }
     }
-
 }
 
 

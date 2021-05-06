@@ -4,10 +4,9 @@
     <div>
       
       <div class="container"> 
-
         <AddTodo />
         <FilterTodo />
-      <Todos   />
+        <Todos />
       </div>
      
     </div>
@@ -18,25 +17,16 @@
 
 import AddTodo from './components/addTodo'
 import Todos from './components/Todos'
- import FilterTodo from './components/filterTodo'
- 
+import FilterTodo from './components/filterTodo'
+//import   './styles/app.scss'
 
 export default {
 components:{
 Todos,
-AddTodo,FilterTodo
+AddTodo,FilterTodo,
   },
 
-  methods: {
-    startHacking () {
-      this.$notify({
-        title: 'It works!',
-        type: 'success',
-        message: 'We\'ve laid the ground work for you. It\'s time for you to build something epic!',
-        duration: 5000
-      })
-    }
-  }
+ 
 }
 </script>
 
